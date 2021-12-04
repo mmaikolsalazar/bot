@@ -141,7 +141,7 @@ autoketik = false;
 prefixStatus = false;
 targetpc = "16202937405"; 
 owner = "16202937405"; 
-fakeyoi = "Xeon"; 
+fakeyoi = "Demon Bot"; 
 HunterApi = "Ikyy69", 
 xchillds = 'XChillDs' 
 hardi = 'hardianto', 
@@ -210,10 +210,10 @@ const runtime = function (seconds) {
   var h = Math.floor((seconds % (3600 * 24)) / 3600);
   var m = Math.floor((seconds % 3600) / 60);
   var s = Math.floor(seconds % 60);
-  var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " Day, ") : "";
-  var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " Hour, ") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " Minute, ") : "";
-  var sDisplay = s > 0 ? s + (s == 1 ? " second" : " Second") : "";
+  var dDisplay = d > 0 ? d + (d == 1 ? " día, " : " Día, ") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Hora, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minuto, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundo") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
 module.exports = xeon = async (xeon, mek) => {
@@ -1372,9 +1372,9 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                contentText: `${txtt}`,
                footerText: `Estado 👺
                
- Velocidad 👺 : ${latensie.toFixed(4)} _Second_
- Actividad 👺 : ${runtime(process.uptime())}
- Plataforma del BOT 👺 : ${os.platform()}`, imageMessage: imageMsg,
+ Velocidad  : ${latensie.toFixed(4)} _Second_
+ Actividad  : ${runtime(process.uptime())}
+ Plataforma del BOT  : ${os.platform()}`, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
 }
@@ -1405,9 +1405,9 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
        menu = `
 Hola @${sender.split("@")[0]}
 
-Velocidad 👺 : ${latensie.toFixed(4)} _Second_
-Actividad 👺 : ${runtime(process.uptime())}
-Plataforma del BOT 👺 : ${os.platform()}
+Velocidad  : ${latensie.toFixed(4)} _Second_
+Actividad  : ${runtime(process.uptime())}
+Plataforma del BOT  : ${os.platform()}
 ${readmore}
  
  ⬣ 𝙊𝙒𝙉𝙀𝙍
@@ -2908,7 +2908,7 @@ Source : ${anu.result.source}
 										axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
 										.then(async (a) => {
                                                                                         let meno = await getBuffer(nowm)
-											me = `*Link* : ${a.data}`
+											me = `${a.data}`
 											xeon.sendMessage(from,meno,MessageType.video,{mimetype:'video/mp4',quoted: mek, caption:me})
 											})
 										}).catch((err) => reply(`Invalid link`))
@@ -4356,13 +4356,13 @@ case "intake3": // by xeon
               let link = await getBuffer(i.url);
               xeon.sendMessage(from, link, video, {
                 quoted: mek,
-                caption: `Type : ${i.type}`,
+                caption: `Tipo : ${i.type}`,
               });
             } else {
               let link = await getBuffer(i.url);
               xeon.sendMessage(from, link, image, {
                 quoted: mek,
-                caption: `Type : ${i.type}`,
+                caption: `Tipo : ${i.type}`,
               });
             }
           }
